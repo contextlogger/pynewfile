@@ -1,16 +1,44 @@
+# 
+# test_take_photo.py
+# 
+# Copyright 2008 Helsinki Institute for Information Technology (HIIT)
+# and the authors. All rights reserved.
+# 
+# Authors: Tero Hasu <tero.hasu@hut.fi>
+# 
+
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this software and associated documentation files
+# (the "Software"), to deal in the Software without restriction,
+# including without limitation the rights to use, copy, modify, merge,
+# publish, distribute, sublicense, and/or sell copies of the Software,
+# and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+# BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+# ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 import pynewfile
-
-# This does not work even though Gallery is launched.
-#gallery_uid = 0x101f8599
-#print repr(pynewfile.take_photo(gallery_uid))
-
 import sysinfo
 
+# The UID to use depends on S60 version. There are at least two
+# different Camera UIDs.
 osv = sysinfo.os_version()
 if osv == (2,0,1528): # N95
     uid = 0x101ffa86
-elif osv == (2,0,1071): # E61 (has no camera)
-    uid = 0x101f857a # works on N91 apparently
+if osv == (2,0,1177): # E71
+    uid = 0x101ffa86
+elif osv == (2,0,1071): # E61 or E61i
+    uid = 0x101f857a # but E61 has no camera
 else:
     raise "do not know what UID to use on this phone"
 

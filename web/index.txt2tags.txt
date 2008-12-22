@@ -1,0 +1,39 @@
+pynewfile for Python for S60
+
+%%mtime(%c)
+
+%!includeconf: config.t2t
+%! Options : --toc --enum-title
+
+h1. Introduction
+
+The ``pynewfile`` [Python for S60 http://www.forum.nokia.com/python] extension provides very limited support for accessing native services via the [New File Service Client API http://wiki.forum.nokia.com/index.php/New_File_Service_Client_API]. At present ``pynewfile`` is not a general-purpose wrapper for the native API, and is really only intended to be used for image capture with the Camera application. It might conceivably be compatible with some other services, but we do not know of any such services.
+
+h1. Status
+
+Stable.
+
+h1. Examples
+
+The [programs used to test ``pynewfile`` ../test-programs] also serve as example programs. There is no API documentation available for ``pynewfile``. The API is really simple, though, and the examples should be sufficient to cover it.
+
+h1. License
+
+For the license under which the software is released, see the [license.txt ../doc/license.txt] file.
+
+h1. Download
+
+A [collection of release builds ../download/] is available. The ``sisx`` file without a version number is the latest release. You may or may not find the [changelog.txt changelog.txt] file useful in trying to determine what has changed between releases.
+
+A [darcs http://darcs.net/] repository of the [source code ..] (with change history) is also available, and can be retrieved with the ``get`` command of ``darcs``.
+
+h1. Dependencies
+
+The software runs on some S60 3rd Edition devices, but we do not know on which ones. The software accesses the New File Service Client ABI, and there are apparently no guarantees as to the binary compatibility for that ABI, neither "neither between platform versions or within a platform version". But we have yet to come across any 3rd Edition devices that would be incompatible with our builds of ``pynewfile``.
+
+h1. Contributing
+
+Contributions are welcome. Send patches to the below email address. The ``send`` command of ``darcs`` may be used.
+
+------------------------------------------------
+Tero Hasu /// tero.hasu@hut.fi
