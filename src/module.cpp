@@ -38,6 +38,8 @@
 #include <symbian_python_ext_util.h>
 #include "local_epoc_py_utils.h"
 
+// http://library.forum.nokia.com/topic/S60_5th_Edition_Cpp_Developers_Library/GUID-A5D8B482-30A4-4AB8-BDE6-E2B8D9E46CFF.html
+
 //const TUid KUidCamcorder1 = {0x101ffa86}; // in N95
 
 static PyObject* TakePhotoL(TUid aUid)
