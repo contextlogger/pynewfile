@@ -2,12 +2,13 @@ pynewfile for Python for S60
 
 %%mtime(%c)
 
-%!includeconf: config.t2t
 %! Options : --toc --enum-title
 
 h1. Introduction
 
-The ``pynewfile`` [Python for S60 http://www.forum.nokia.com/python] extension provides very limited support for accessing native services via the [New File Service Client API http://wiki.forum.nokia.com/index.php/New_File_Service_Client_API]. At present ``pynewfile`` is not a general-purpose wrapper for the native API, and is really only intended to be used for image capture with the Camera application. It might conceivably be compatible with some other services, but we do not know of any such services.
+The ``pynewfile`` [Python for S60 https://garage.maemo.org/projects/pys60] extension provides very limited support for accessing native services via the [New File Service Client API http://wiki.forum.nokia.com/index.php/New_File_Service_Client_API]. At present ``pynewfile`` is not a general-purpose wrapper for the native API, and is really only intended to be used for image capture with the Camera application. It might conceivably be compatible with some other services, but we do not know of any such services.
+
+Only PyS60 1.4.x series is supported by this extension.
 
 h1. Status
 
@@ -15,27 +16,31 @@ Stable.
 
 h1. Examples
 
-The [programs used to test ``pynewfile`` ../test-programs] also serve as example programs. There is no API documentation available for ``pynewfile``. The API is really simple, though, and the examples should be sufficient to cover it.
+The [programs used to test ``pynewfile`` https://github.com/contextlogger/pynewfile/tree/master/test-programs] also serve as example programs. There is no API documentation available for ``pynewfile``. The API is really simple, though, and the examples should be sufficient to cover it.
 
 h1. License
 
-For the license under which the software is released, see the [license.txt ../doc/license.txt] file.
+For the license under which the software is released, see the [license.txt https://github.com/contextlogger/pynewfile/blob/master/doc/license.txt] file.
 
 h1. Download
 
-A [collection of release builds ../download/] is available. The ``self`` variant is self-signed, with maximum self-signable capabilities. The ``dev`` variant is signable with Symbian's Open Signed Online or with a developer certificate, and has maximum capabilities allowed by Open Signed Online.
+A [collection of release builds download/] is available. The ``self`` variant is self-signed, with maximum self-signable capabilities. The ``dev`` variant is signable with Symbian's Open Signed Online or with a developer certificate, and has maximum capabilities allowed by Open Signed Online.
 
-You may or may not find the [changelog.txt changelog.txt] file useful in trying to determine what has changed between releases.
+You may or may not find the [changelog https://github.com/contextlogger/pynewfile/commits/master/] useful in trying to determine what has changed between releases.
 
-A [darcs http://darcs.net/] repository of the [source code ..] (with change history) is also available, and can be retrieved with the ``get`` command of ``darcs``.
+A [Git http://git-scm.com/] repository of the source code (with change history) is also available, hosted on GitHub at http://github.com/contextlogger/pynewfile.
 
 h1. Dependencies
 
-The software runs on some S60 3rd Edition devices, but we do not know on which ones. The software accesses the New File Service Client ABI, and there are apparently no guarantees as to the binary compatibility for that ABI, "neither between platform versions or within a platform version". But we have yet to come across any 3rd Edition devices that would be incompatible with our builds of ``pynewfile``.
+The software runs on some S60 3rd Edition devices, but we do not know if it runs on all of them, nor do we know if it runs on 5th Edition or higher. The software accesses the New File Service Client ABI, and there are apparently no guarantees as to the binary compatibility for that ABI, "neither between platform versions or within a platform version". But we have yet to come across any 3rd Edition devices that would be incompatible with our builds of ``pynewfile``.
 
-h1. Contributing
+h1. Acknowledgements
 
-Contributions are welcome. Send patches to the below email address. The ``send`` command of ``darcs`` may be used.
+The library was created at [HIIT http://www.hiit.fi/].
 
 ------------------------------------------------
-Tero Hasu /// tero.hasu@hut.fi
+_signature_th_
+
+% Local Variables:
+% mode: longlines
+% End:
